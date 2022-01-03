@@ -1,0 +1,5 @@
+﻿student@Ubuntu-MySQL-VirtualBox:~$ sudo iptables -P INPUT DROP
+[sudo] пароль для student: 
+student@Ubuntu-MySQL-VirtualBox:~$ sudo iptables -A INPUT -i eth0 -p tcp --dport 80 -j ACCEPT
+student@Ubuntu-MySQL-VirtualBox:~$ sudo iptables -A INPUT -i eth0 -p tcp --dport 22 -j ACCEPT
+student@Ubuntu-MySQL-VirtualBox:~$ 

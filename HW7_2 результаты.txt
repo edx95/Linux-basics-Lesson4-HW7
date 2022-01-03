@@ -1,0 +1,61 @@
+﻿2. Установить пакет на свой выбор, используя snap.
+
+
+student@Ubuntu-MySQL-VirtualBox:~$ snap search mysql
+Name                       Version              Publisher         Notes    Summary
+mysql                      5.7.17               ltangvald         -        Experimental MySQL Community snap
+mysql-shell                8.0.23               canonical✓        -        MySQL Shell is an advanced client and code editor for MySQL Server.
+mysql-workbench-community  8.0.25               tonybolzan        -        MySQL Workbench
+mysql-query-profiler       1.0.2                kpro4             -        MySQL Query Profiler
+mysql-experimental         5.7.16               ltangvald         -        Experimental MySQL Community snap
+beekeeper-studio           2.1.5                matthew-rathbone  -        Open Source SQL Editor and Database Manager (PSQL, MySQL, SQLite, +more)
+nextcloud                  22.2.3snap2          nextcloud✓        -        Nextcloud Server - A safe home for all your data
+datagrip                   2021.3.3             jetbrains✓        classic  DataGrip
+digikam                    7.4.0                kde✓              -        Photo Management Program
+smonitor                   0.0.4beta-amd64      jes               -        Monitoring of server states (and other things)
+antares                    v0.4.1               fabio286          -        A modern, fast and productivity driven SQL client with a focus in UX.
+heidisql-wine              11.3                 kianda            -        HeidiSQL is a free and powerful database client
+nervatura                  5.0.0-beta.15        nervatura         -        Open Source Business Management Framework
+dbeaver-ce                 21.3.1.202112111946  dbeaver-corp      -        Universal Database Manager and SQL Client
+gogs                       0.1                  vtuson            -        golang based git server and ui
+statping                   0.90.61              hunterlong        -        Statping Server Monitoring with Status Page
+cdbc                       0.2.0                fnordahl          -        C library providing simple and easy to use interfaces to the ODBC API
+laurux                     3.68.7               damscot-p         -        Gestion Entreprise PME ERP / PGI et Caisse Point de Vente (POS) GNU GPL Français
+squirrelsql                4.3.0                jibel             -        A Java SQL client for any JDBC compliant database
+query-exporter             2.7.1                ack               -        Export Prometheus metrics from SQL queries
+dbgate                     4.5.0                zputil            -        Opensource database administration tool
+statping-ng                0.90.79              adamboutcher      -        Statping-ng Server Monitoring with Status Page
+tunl                       0.9.2                pjvds             -        Expose your localhost to the public via an secure tunnel
+vmcloud-nextcloud          1.0.0                victoriususm      -        Nextcloud 16.0.3 Optimized-Boosted
+statup                     0.79.91              hunterlong        -        Statup Server Monitoring with Status Page
+wal-g                      0.2.19               stub              classic  WAL archival and restoration tool for PostgreSQL
+mycli                      1.24.1               khiemdoan         -        mycli is a command line interface for MySQL, MariaDB, and Percona.
+sync-and-dump-s3           0.9                  scorching+shade   -        Sync aws s3 buckets and Upload dumps of mysql and mongodb
+restore-dump-s3            1.017                scorching+shade   -        Restore dumps of mysql and mongodb from aws s3 buckets
+trico                      2.6.1                ngudbhav          -        Convert your Excel Spreadsheet to a table/collection in MYSQL/MongoDB
+sqlmap                     1.5.7                khiemdoan         -        Automatic SQL injection and database takeover tool
+juju-backup-all            1.0.0                zzehring          -        Tool for backing up charms, local configs, and Juju controllers.
+student@Ubuntu-MySQL-VirtualBox:~$ sudo snap install mysql-workbench-community
+mysql-workbench-community 8.0.25 from Tonin Bolzan (tonybolzan) installed
+student@Ubuntu-MySQL-VirtualBox:~$ mysql-workbench-community
+Warning: Schema “org.gnome.system.locale” has path “/system/locale/”.  Paths starting with “/apps/”, “/desktop/” or “/system/” are deprecated.
+Warning: Schema “org.gnome.system.proxy” has path “/system/proxy/”.  Paths starting with “/apps/”, “/desktop/” or “/system/” are deprecated.
+Warning: Schema “org.gnome.system.proxy.http” has path “/system/proxy/http/”.  Paths starting with “/apps/”, “/desktop/” or “/system/” are deprecated.
+Warning: Schema “org.gnome.system.proxy.https” has path “/system/proxy/https/”.  Paths starting with “/apps/”, “/desktop/” or “/system/” are deprecated.
+Warning: Schema “org.gnome.system.proxy.ftp” has path “/system/proxy/ftp/”.  Paths starting with “/apps/”, “/desktop/” or “/system/” are deprecated.
+Warning: Schema “org.gnome.system.proxy.socks” has path “/system/proxy/socks/”.  Paths starting with “/apps/”, “/desktop/” or “/system/” are deprecated.
+Using /snap/mysql-workbench-community/9/usr/lib/x86_64-linux-gnu/libproj.so.
+Gtk-Message: 00:08:55.156: Failed to load module "canberra-gtk-module"
+Gtk-Message: 00:08:55.174: Failed to load module "canberra-gtk-module"
+Fontconfig warning: "/etc/fonts/conf.avail/53-monospace-lcd-filter.conf", line 10: Having multiple values in <test> isn't supported and may not work as expected
+
+(mysql-workbench-bin:8489): Gtk-CRITICAL **: 00:09:49.906: gtk_container_foreach: assertion 'GTK_IS_CONTAINER (container)' failed
+
+(mysql-workbench-bin:8489): Gtk-CRITICAL **: 00:09:49.978: gtk_container_foreach: assertion 'GTK_IS_CONTAINER (container)' failed
+
+(mysql-workbench-bin:8489): Gtk-CRITICAL **: 00:09:50.183: gtk_container_foreach: assertion 'GTK_IS_CONTAINER (container)' failed
+
+(mysql-workbench-bin:8489): Gtk-CRITICAL **: 00:09:50.254: gtk_container_foreach: assertion 'GTK_IS_CONTAINER (container)' failed
+
+(mysql-workbench-bin:8489): Gtk-CRITICAL **: 00:10:00.367: gtk_container_foreach: assertion 'GTK_IS_CONTAINER (container)' failed
+student@Ubuntu-MySQL-VirtualBox:~$ 

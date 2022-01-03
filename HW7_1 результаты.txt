@@ -1,0 +1,97 @@
+﻿1. Подключить репозиторий с nginx любым удобным способом, установить nginx и потом удалить nginx, используя утилиту dpkg.
+
+
+student@Ubuntu-MySQL-VirtualBox:~$ curl -fsSL https://nginx.org/keys/nginx_signing.key | sudo apt-key add -
+Программа 'curl' на данный момент не установлена. Вы можете установить её, выполнив:
+sudo apt install curl
+gpg: не найдено данных формата OpenPGP.
+student@Ubuntu-MySQL-VirtualBox:~$ sudo apt install curl
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  libevent-core-2.0-5 snapd-login-service
+Для их удаления используйте «sudo apt autoremove».
+Следующие НОВЫЕ пакеты будут установлены:
+  curl
+Обновлено 0 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 1 пакетов не обновлено.
+Необходимо скачать 139 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 340 kB.
+Пол:1 http://ru.archive.ubuntu.com/ubuntu xenial-updates/main amd64 curl amd64 7.47.0-1ubuntu2.19 [139 kB]
+Получено 139 kB за 0с (485 kB/s)
+Выбор ранее не выбранного пакета curl.
+(Чтение базы данных … на данный момент установлено 223125 файлов и каталогов.)
+Подготовка к распаковке …/curl_7.47.0-1ubuntu2.19_amd64.deb …
+Распаковывается curl (7.47.0-1ubuntu2.19) …
+Обрабатываются триггеры для man-db (2.7.5-1) …
+Настраивается пакет curl (7.47.0-1ubuntu2.19) …
+student@Ubuntu-MySQL-VirtualBox:~$ sudo apt update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu xenial InRelease
+Сущ:2 http://ppa.launchpad.net/linuxuprising/java/ubuntu xenial InRelease                               
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu xenial-updates InRelease                                                                     
+Сущ:4 http://security.ubuntu.com/ubuntu xenial-security InRelease                                                                      
+Сущ:5 http://ru.archive.ubuntu.com/ubuntu xenial-backports InRelease                                                                   
+Сущ:6 http://ppa.launchpad.net/webupd8team/java/ubuntu xenial InRelease                                     
+Сущ:7 https://esm.ubuntu.com/infra/ubuntu xenial-infra-security InRelease
+Сущ:8 https://esm.ubuntu.com/infra/ubuntu xenial-infra-updates InRelease
+Сущ:9 https://dbeaver.io/debs/dbeaver-ce  InRelease
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Может быть обновлён 1 пакет. Запустите «apt list --upgradable» для показа.
+student@Ubuntu-MySQL-VirtualBox:~$ apt list --upgradable
+Вывод списка… Готово
+dbeaver-ce/неизвестно 21.3.2 amd64 [может быть обновлён с: 21.3.0]
+N: Есть 1 дополнительная версия. Используйте «-a» для просмотра.
+
+student@Ubuntu-MySQL-VirtualBox:~$ apt list --upgradable -a
+Вывод списка… Готово
+dbeaver-ce/неизвестно 21.3.2 amd64 [может быть обновлён с: 21.3.0]
+dbeaver-ce/now 21.3.0 amd64 [установлен, может быть обновлён до: 21.3.2]
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo apt install -y nginx
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  libevent-core-2.0-5 snapd-login-service
+Для их удаления используйте «sudo apt autoremove».
+Будут установлены следующие дополнительные пакеты:
+  nginx-common nginx-core
+Предлагаемые пакеты:
+  fcgiwrap nginx-doc
+Следующие НОВЫЕ пакеты будут установлены:
+  nginx nginx-common nginx-core
+Обновлено 0 пакетов, установлено 3 новых пакетов, для удаления отмечено 0 пакетов, и 1 пакетов не обновлено.
+Необходимо скачать 460 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 1 485 kB.
+Пол:1 http://ru.archive.ubuntu.com/ubuntu xenial-updates/main amd64 nginx-common all 1.10.3-0ubuntu0.16.04.5 [26,9 kB]
+Пол:2 http://ru.archive.ubuntu.com/ubuntu xenial-updates/main amd64 nginx-core amd64 1.10.3-0ubuntu0.16.04.5 [429 kB]
+Пол:3 http://ru.archive.ubuntu.com/ubuntu xenial-updates/main amd64 nginx all 1.10.3-0ubuntu0.16.04.5 [3 494 B]
+Получено 460 kB за 0с (1 858 kB/s)
+Предварительная настройка пакетов ...
+Выбор ранее не выбранного пакета nginx-common.
+(Чтение базы данных … на данный момент установлено 223132 файла и каталога.)
+Подготовка к распаковке …/nginx-common_1.10.3-0ubuntu0.16.04.5_all.deb …
+Распаковывается nginx-common (1.10.3-0ubuntu0.16.04.5) …
+Выбор ранее не выбранного пакета nginx-core.
+Подготовка к распаковке …/nginx-core_1.10.3-0ubuntu0.16.04.5_amd64.deb …
+Распаковывается nginx-core (1.10.3-0ubuntu0.16.04.5) …
+Выбор ранее не выбранного пакета nginx.
+Подготовка к распаковке …/nginx_1.10.3-0ubuntu0.16.04.5_all.deb …
+Распаковывается nginx (1.10.3-0ubuntu0.16.04.5) …
+Обрабатываются триггеры для ureadahead (0.100.0-19.1) …
+Обрабатываются триггеры для systemd (229-4ubuntu21.31) …
+Обрабатываются триггеры для ufw (0.35-0ubuntu2) …
+Настраивается пакет nginx-common (1.10.3-0ubuntu0.16.04.5) …
+Настраивается пакет nginx-core (1.10.3-0ubuntu0.16.04.5) …
+Настраивается пакет nginx (1.10.3-0ubuntu0.16.04.5) …
+Обрабатываются триггеры для ureadahead (0.100.0-19.1) …
+Обрабатываются триггеры для systemd (229-4ubuntu21.31) …
+Обрабатываются триггеры для ufw (0.35-0ubuntu2) …
+student@Ubuntu-MySQL-VirtualBox:~$ sudo dpkg -r nginx
+(Чтение базы данных … на данный момент установлено 223186 файлов и каталогов.)
+Удаляется nginx (1.10.3-0ubuntu0.16.04.5) …
+student@Ubuntu-MySQL-VirtualBox:~$ 
+
+
